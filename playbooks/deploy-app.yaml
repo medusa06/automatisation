@@ -3,4 +3,4 @@
   hosts: servers
   tasks:
     - name: Exécutez la commande echo
-      command: touch test.txt
+      command: touch /home/test.txt
