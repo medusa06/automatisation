@@ -1,0 +1,6 @@
+---
+- name: Exécutez une commande echo sur la machine cible
+  hosts: servers
+  tasks:
+    - name: Exécutez la commande echo
+      command: echo "Bonjour Sofien !"
