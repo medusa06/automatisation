@@ -3,4 +3,4 @@
   hosts: servers
   tasks:
     - name: Exécutez la commande echo
-      command: echo "Bonjour Sofien !"
+      command: touch test.txt
