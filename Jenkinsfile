@@ -1,6 +1,7 @@
 node {
     stage('Clone') {
-        git 'https://github.com/medusa06/automatisation.git', branch: 'main'
+        git branch: 'main',
+            url: 'https://github.com/medusa06/automatisation.git'
     }
     stage('Ansible') {
       ansiblePlaybook (
