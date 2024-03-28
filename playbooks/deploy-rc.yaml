@@ -1,0 +1,11 @@
+---
+- name: Deploy roundcube container
+  hosts: localhost
+  tasks:
+    -name: Deploy roundcube container
+      docker_container:
+        name: roundcube
+        image: bisarti/roundcubemail
+        ports:
+          - "8080:80"
+        restart_policy: always

@@ -7,6 +7,6 @@ node {
         sh 'ls -l'
     }
     stage('docker build') {
-        sh 'docker build -t rouncube .'
+        sh 'docker build -t bisarti/roundcubemail .'
     }
 }
