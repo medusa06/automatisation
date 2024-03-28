@@ -3,7 +3,7 @@ node {
         git branch: 'bilell',
             url: 'https://github.com/medusa06/automatisation.git'
     }
-    stage('ls') {
+    stage('pwd') {
         sh 'ls -l'
     }
     stage('docker build') {
