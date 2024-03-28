@@ -1,0 +1,18 @@
+---
+- name: Deploy Roundcube
+  hosts: all
+  become: true
+  tasks:
+    - name: Pull Docker image
+      docker_image:
+        name: "medusaaa06/sofien-rounducube"
+        source: pull
+
+    - name: Run Roundcube
+      docker_container:
+        name: roundcube
+        image: "medusaaa06/sofien-rounducube"
+        state: started
+        restart_policy: always
+        ports:
+          - "8080:80"
