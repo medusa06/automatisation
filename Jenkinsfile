@@ -9,4 +9,12 @@ node {
     stage('docker build') {
         sh 'docker build -t bisarti/roundcubemail .'
     }
+    stage('Ansible') {
+        ansiblePlaybook (
+            colorized: true, 
+            become: true,             
+            playbook: 'playbooks/deploy-rc.yaml',
+            inventory: 'hosts/hosts.ini'
+        )
+    }
 }
