@@ -9,9 +9,9 @@ date_heure=$(date +"%Y-%m-%d_%H-%M-%S")
 dir_save="/home/backups"
 dir_data="/home/data"
 
-cp -r "$data_dir" "$backup_dir"
+cp -r $dir_data $dir_save"
 
-taille_dir_save="du -sh "$dir_save"
+taille_dir_save=$(du -sh "$dir_save")
 
 if $taille_dir_save > 5*1024*1024 )) then
     echo "Attention : la taille du dossier de sauvegarde dépasse 5 Gb."
