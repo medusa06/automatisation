@@ -1,6 +1,6 @@
 node {
     stage('Clone') {
-        git branch: 'main',
+        git branch: 'bilell',
             url: 'https://github.com/medusa06/automatisation.git'
     }
     stage('ls') {
