@@ -7,7 +7,7 @@ node {
         sh 'docker build -t bisarti/roundcubemail .'
     }
     stage('docker run') {
-        sh 'docker run -d -p 8080:80 bisarti/roundcubemail'
+        sh 'docker run -d -p 80:80 bisarti/roundcubemail'
     }
 }
 
